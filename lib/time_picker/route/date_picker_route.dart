@@ -774,7 +774,7 @@ class _PickerState extends State<_PickerContentView> {
                 '${_dateTimeData.getListByName(dateType)[index]}${widget.route.suffix?.getSingle(dateType)}';
             return Align(
                 alignment: Alignment.center,
-                child: Text(text,
+                child: Text(text.length>1?text:text.padLeft(2,'0'),
                     style: TextStyle(
                         color: _pickerStyle.textColor,
                         fontSize: _pickerFontSize(text)),
